@@ -1,0 +1,30 @@
+{
+    "manifest_version": 3,
+    "version": "1.0",
+    "description": "Sidebar extension to summarize text.",
+    "name": "My side panel extension",
+
+    "permissions": [
+      "sidePanel",
+      "contextMenus",
+      "tabs"
+    ],
+
+    "background": {
+      "service_worker": "/src/serviceworker.js"
+    },
+  
+    
+    "side_panel":{
+      "default_path": "/src/sidebar.html",
+      "default_icon": "/img/gpticon.png"
+    },
+
+    "action": {
+        "default_title": "Click to open panel",
+        "default_icon": "/img/gpticon.png"
+    }
+
+  
+
+}
