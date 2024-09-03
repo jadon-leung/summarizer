@@ -1,0 +1,44 @@
+#chat-log {
+    width: 100%;  /* Make the box full width */
+    height: 300px; /* Increase the height to make the box larger */
+    overflow-y: auto; /* Add scroll if the content overflows */
+    padding: 10px; /* Optional: Add padding for better readability */
+    border: 3px solid #10a37f; /* Optional: Add a border for clarity */
+    margin-bottom: 5px;
+    border-radius: 10px;
+}
+
+#summarizeBtn {
+  background: #10a37f;
+  border-radius: 999px;
+  box-shadow: #10a37f 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+}
+
+#summarizeBtn:hover{
+    background: #72d3bc;
+
+}
+
+h1{
+    color:#10a37f
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+}

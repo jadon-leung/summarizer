@@ -3,28 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" /> 
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
   <title>ChatGPT Summarizer</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 10px;
-    }
-    #summary {
-      margin-top: 20px;
-      white-space: pre-wrap;
-    }
-  </style>
+ 
 </head>
 <body>
   <h1>Summary</h1>
-  <div id="summary">Click "Summarize" to get the summary of the current page.</div>
-  <button id="summarizeBtn">Summarize</button>
+  <!-- <div id="summary">Click "Summarize" to get the summary of the current page.</div> -->
+
   <div id = "chat-log">
+ 
     
   </div>
+  <button id="summarizeBtn">Summarize</button>
   <script type = "module" src="sidebar.js">
     const chatLog = document.getElementById('chat-log');
     const message = document.getElementById('message');
+    
   </script>
   
 </body>

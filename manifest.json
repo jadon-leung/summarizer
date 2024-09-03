@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "version": "1.0",
+    "version": "2.0",
     "description": "Sidebar extension to summarize text.",
-    "name": "My side panel extension",
+    "name": "SummarizerGPT",
 
     "permissions": [
       "sidePanel",
@@ -14,9 +14,7 @@
     "host_permissions":[
       "<all_urls>"
     ],
-    "background": {
-      "service_worker": "/src/serviceworker.js"
-    },
+    
   
     
     "side_panel":{
