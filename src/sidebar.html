@@ -19,7 +19,13 @@
   <h1>Summary</h1>
   <div id="summary">Click "Summarize" to get the summary of the current page.</div>
   <button id="summarizeBtn">Summarize</button>
-
-  <script type = "module" src="sidebar.js"></script>
+  <div id = "chat-log">
+    
+  </div>
+  <script type = "module" src="sidebar.js">
+    const chatLog = document.getElementById('chat-log');
+    const message = document.getElementById('message');
+  </script>
+  
 </body>
 </html>

@@ -1,10 +1,3 @@
-import OpenAI from "oepnai";
-
-const openai = new OpenAI({
-    organization: 'org-EKMJOl4XH1a5j2yePj6IEsxy',
-    project: 'summarizer',
-});
-
 
 document.getElementById('summarizeBtn').addEventListener('click', async () => {
     // Get the content of the active tab
@@ -21,7 +14,7 @@ document.getElementById('summarizeBtn').addEventListener('click', async () => {
         const summary = await getSummary(content);
         
         // Display the summary in the side panel
-        document.getElementById('summary').innerText = summary;
+        document.getElementById('chat-log').innerText = summary;
       }
     });
   });
@@ -33,8 +26,8 @@ document.getElementById('summarizeBtn').addEventListener('click', async () => {
   
   // Function to call the ChatGPT API and get a summary
   async function getSummary(content) {
-    const apiKey = 'sk-SHo3X0YX6jQAOX8Fx6lLWOUcjKTffuSpi2oRQfFgkhT3BlbkFJHAo-nfaMENaPYDXAuDCoqADRGIiiosmKgckoE4TowA'; // Replace with your OpenAI API key
-    const apiUrl = 'https://api.openai.com/v1/engines/davinci-codex/completions';
+    const apiKey = 'sk-SELpgpnQtHUc0_S5OjifiZE11PbPKhd1I0EpPxAdUhT3BlbkFJQ0H4b1HxbVeHm-D-9hh0sazdrQN1PlAgCnnq38Lr0A'; // Replace with your OpenAI API key
+    const apiUrl = 'https://api.openai.com/v1/chat/completions';
   
     const response = await fetch(apiUrl, {
       method: 'POST',
@@ -43,15 +36,17 @@ document.getElementById('summarizeBtn').addEventListener('click', async () => {
         'Authorization': `Bearer ${apiKey}`,
       },
       body: JSON.stringify({
-        prompt: `Summarize the following content:\n\n${content}\n\nSummary:`,
+        model: "gpt-3.5-turbo", // Specify the model
+        messages: [
+          { role: "system", content: "You are a helpful assistant." },
+          { role: "user", content: `Summarize the following content:\n\n${content}` }
+        ],
         max_tokens: 150,
-        n: 1,
-        stop: ['\n'],
         temperature: 0.7,
       }),
     });
   
     const data = await response.json();
-    return data.choices[0].text.trim();
+    return data.choices[0].message.content.trim();
   }
   

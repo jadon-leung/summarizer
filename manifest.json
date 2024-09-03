@@ -7,9 +7,13 @@
     "permissions": [
       "sidePanel",
       "contextMenus",
-      "tabs"
+      "tabs",
+      "scripting",
+      "activeTab"
     ],
-
+    "host_permissions":[
+      "<all_urls>"
+    ],
     "background": {
       "service_worker": "/src/serviceworker.js"
     },
