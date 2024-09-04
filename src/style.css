@@ -1,6 +1,6 @@
 #chat-log {
     width: 100%;  /* Make the box full width */
-    height: 300px; /* Increase the height to make the box larger */
+    height: 500px; /* Increase the height to make the box larger */
     overflow-y: auto; /* Add scroll if the content overflows */
     padding: 10px; /* Optional: Add padding for better readability */
     border: 3px solid #10a37f; /* Optional: Add a border for clarity */
